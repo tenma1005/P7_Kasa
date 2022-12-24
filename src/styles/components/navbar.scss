@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+
+  .navbar-logo {
+    height: 3.5rem;
+  }
+
+  .navbar-link {
+    display: flex;
+    width: 25%;
+
+    .navbar-link-style {
+      width: 100%;
+      color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-decoration: none;
+      font-size: large;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
