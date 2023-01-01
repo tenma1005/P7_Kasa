@@ -1,0 +1,24 @@
+.opinion {
+  display: flex;
+  align-items: center;
+
+  .opinion-icon {
+    margin-right: 0.25rem;
+    height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .opinion {
+    .opinion-icon {
+      height: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .opinion {
+    .opinion-icon {
+      height: 1.2rem;
+    }
+  }
+}

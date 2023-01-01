@@ -1,0 +1,80 @@
+.accommodation {
+  margin: 0 5% 10% 5%;
+  color: $primary;
+
+  .accommodation-content {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .accommodation-details {
+    width: auto;
+  }
+
+  .accommodation-name {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .accommodation-city {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 3%;
+  }
+  .accommodation-categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .accommodation-opinion-and-host {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .accommodation-description-and-equipement {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .accommodation {
+    .accommodation-name {
+      font-size: 1.5rem;
+    }
+    .accommodation-city {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accommodation {
+    .accommodation-content {
+      display: block;
+    }
+
+    .accommodation-name {
+      font-size: 1rem;
+    }
+
+    .accommodation-city {
+      font-size: 0.7rem;
+    }
+    .accommodation-opinion-and-host {
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .accommodation-description-and-equipement {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

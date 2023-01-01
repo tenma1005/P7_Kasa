@@ -1,0 +1,76 @@
+.diapo {
+  position: relative;
+
+  .img-active {
+    height: 20.75rem;
+    width: 100%;
+    img {
+      height: 20.75rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1.25rem;
+    }
+  }
+
+  .img-inactive {
+    display: none;
+  }
+
+  .btn-prev,
+  .btn-next {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-prev {
+    margin-left: 0.25rem;
+  }
+
+  .btn-next {
+    right: 0;
+  }
+
+  .btn-next-arrow {
+    margin-right: 0.25rem;
+  }
+
+  .btn-next-arrow,
+  .btn-prev-arrow {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .diapo {
+    .img-active {
+      height: 16.75rem;
+      img {
+        height: 16.75rem;
+      }
+    }
+
+    .btn-next-arrow,
+    .btn-prev-arrow {
+      height: 1.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .diapo {
+    .img-active {
+      height: 12.75rem;
+      img {
+        height: 12.75rem;
+      }
+    }
+
+    .btn-next-arrow,
+    .btn-prev-arrow {
+      height: 1.35rem;
+    }
+  }
+}
