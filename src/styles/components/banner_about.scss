@@ -1,0 +1,17 @@
+.banner-img-2 {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-about {
+    height: 25vh;
+
+    .banner-img-1 {
+      display: none;
+    }
+
+    .banner-img-2 {
+      display: block;
+    }
+  }
+}
