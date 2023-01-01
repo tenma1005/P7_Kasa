@@ -1,0 +1,123 @@
+.collapse {
+  margin-bottom: 1rem;
+
+  button {
+    color: $secondary;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    cursor: pointer;
+    position: relative;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  img {
+    margin-right: 0.2rem;
+    pointer-events: none;
+    transition: transform;
+    height: 0.85rem;
+  }
+
+  &-boxtext {
+    color: $primary;
+    background-color: $secondary;
+    border-radius: 0.25rem;
+    margin-top: -0.25rem;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 0.6rem;
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+
+      li {
+        margin-bottom: 0.15rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.vector-rotation {
+  transform: rotate(180deg);
+}
+
+.box-down {
+  max-height: 30rem;
+  padding: 1.2rem 0.6rem 0.6rem 0.6rem;
+}
+
+@media screen and (max-width: 992px) {
+  .collapse {
+    button {
+      height: 2.3rem;
+      border-radius: 0.5rem;
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+
+    img {
+      height: 0.65rem;
+    }
+
+    &-boxtext {
+      p {
+        font-size: 0.7rem;
+      }
+
+      ul {
+        font-size: 0.7rem;
+
+        li {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapse {
+    button {
+      height: 1.5rem;
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+
+    img {
+      height: 0.5rem;
+    }
+    &-boxtext {
+      p {
+        font-size: 0.6rem;
+      }
+      ul {
+        font-size: 0.6rem;
+
+        li {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
