@@ -25,3 +25,28 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    .navbar-logo {
+      height: 2.5rem;
+    }
+    .navbar-link {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    .navbar-logo {
+      height: 2rem;
+    }
+    .navbar-link {
+      .navbar-link-style {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

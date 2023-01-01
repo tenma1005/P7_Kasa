@@ -16,3 +16,13 @@ footer {
     margin-bottom: 1.5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    justify-content: center;
+    .copyright {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+    }
+  }
+}

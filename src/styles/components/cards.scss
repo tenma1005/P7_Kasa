@@ -39,3 +39,24 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .list-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list-card {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 7%;
+
+    .card {
+      height: 30vh;
+    }
+  }
+}
