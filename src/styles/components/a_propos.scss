@@ -1,0 +1,15 @@
+.about {
+  margin: 0 5%;
+  margin-bottom: 5%;
+
+  .about-collapses {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    width: 100%;
+    margin: 0 0 50% 0;
+  }
+}
