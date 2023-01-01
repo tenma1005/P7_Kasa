@@ -3,12 +3,10 @@ import Banner from "../components/banner";
 import image from "../images/banner.png";
 import Cards from "../components/cards";
 
-const slogan = "Chez vous, partout et ailleurs";
-
 function Accueil() {
   return (
     <main>
-      <Banner image={image} title={slogan} />
+      <Banner image={image} title={"Chez vous, partout et ailleurs"} />
       <Cards />
     </main>
   );
