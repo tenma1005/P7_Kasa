@@ -2,12 +2,8 @@ import React from "react";
 
 function Collapse({ title, content, vector1 }) {
   function eventCollapse(event) {
-    event.preventDefault();
     const boxText = event.target.nextSibling;
     const vector = event.target.lastChild;
-    //console.log(boxText);
-    //console.log(vector);
-    //console.log("--------------------");
 
     if (boxText.classList.contains("box-down")) {
       boxText.classList.remove("box-down");
