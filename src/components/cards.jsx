@@ -1,34 +1,18 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 
-function Cards() {
-  const [cards, setCards] = useState();
-
-  useEffect(function () {
-    fetch("http://localhost:3000/logements.json")
-      .then(function (response) {
-        console.table(response);
-        return response.json();
-      })
-      .then(function (data) {
-        //console.log(data);
-        //console.table(data[0].id);
-        console.table(data);
-        setCards(data);
-      });
-  }, []);
-
+function Cards({ logements }) {
   return (
     <section className="list-card">
-      {cards &&
-        cards.map(function (card) {
+      {logements &&
+        logements.map(function (logement) {
           return (
-            <article key={card.id}>
-              <Link to={`/logements/${card.id}`}>
+            <article key={logement.id}>
+              <Link to={`/logements/${logement.id}`}>
                 <div className="card">
-                  <img src={card.cover} alt="" className="card-img" />
-                  <h2 className="card-title">{card.title}</h2>
+                  <img src={logement.cover} alt="" className="card-img" />
+                  <h2 className="card-title">{logement.title}</h2>
                 </div>
               </Link>
             </article>

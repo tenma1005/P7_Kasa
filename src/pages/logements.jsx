@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Error from "./error_404";
 import Opinion from "../components/opinion";
@@ -10,40 +10,14 @@ import Collapse from "../components/collapse";
 
 import vector1 from "../images/vector-1.png";
 
-function Logement() {
-  const [location, setLocation] = useState({
-    tags: [],
-    equipments: [],
-    pictures: [],
-    rating: "",
-    host: { name: "", picture: "" },
-  });
-
+function Logement({ logements }) {
   const { logementId } = useParams();
-
-  useEffect(
-    function () {
-      fetch("http://localhost:3000/logements.json")
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          for (let i = 0; i < data.length; i++) {
-            if (data[i].id === logementId) {
-              //console.log("id de l'article affiché : " + data[i].id);
-              //console.table(data[i]);
-              setLocation(data[i]);
-            }
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    [logementId]
+  const [location] = useState(
+    logements.find((logement) => logement.id === logementId)
   );
+  console.log(location);
 
-  if (location.id === undefined) {
+  if (location === undefined) {
     return <Error />;
   } else {
     return (

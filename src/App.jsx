@@ -1,22 +1,30 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Accueil from "./pages/accueil";
-import APropos from "./pages/a_propos";
-import Logement from "./pages/logements";
-import Error from "./pages/error_404";
+import { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Router from "./Router";
 
 function App() {
+  const [logements, setLogements] = useState([]);
+  useEffect(function () {
+    fetch("http://localhost:3000/logements.json")
+      .then(function (response) {
+        console.table(response);
+        return response.json();
+      })
+      .then(function (logements) {
+        //console.log(data);
+        //console.table(data[0].id);
+        console.table(logements);
+        setLogements(logements);
+      });
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Accueil />} />
-        <Route path="*" element={<Error />} />
-        <Route path="/a_propos" element={<APropos />} />
-        <Route path="logements/:logementId" element={<Logement />} />
-      </Routes>
+      <Router logements={logements} />
       <Footer />
     </BrowserRouter>
   );

@@ -3,11 +3,11 @@ import Banner from "../components/banner";
 import image from "../images/banner.png";
 import Cards from "../components/cards";
 
-function Accueil() {
+function Accueil({ logements }) {
   return (
     <main>
       <Banner image={image} title={"Chez vous, partout et ailleurs"} />
-      <Cards />
+      <Cards logements={logements} />
     </main>
   );
 }

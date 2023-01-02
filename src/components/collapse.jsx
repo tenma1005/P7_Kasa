@@ -2,6 +2,7 @@ import React from "react";
 
 function Collapse({ title, content, vector1 }) {
   function eventCollapse(event) {
+    event.preventDefault();
     const boxText = event.target.nextSibling;
     const vector = event.target.lastChild;
 
