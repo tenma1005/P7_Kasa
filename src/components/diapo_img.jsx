@@ -56,7 +56,6 @@ function DiapoImg({ diapo }) {
           );
         }
       })}
-      {}
       {arrow()}
     </div>
   );
