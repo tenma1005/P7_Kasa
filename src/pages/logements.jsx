@@ -25,13 +25,11 @@ function Logement() {
     function () {
       fetch("http://localhost:3000/logements.json")
         .then(function (response) {
-          //console.table(response);
           return response.json();
         })
         .then(function (data) {
           for (let i = 0; i < data.length; i++) {
             if (data[i].id === logementId) {
-              //console.log("id de logementid :" + logementId);
               //console.log("id de l'article affiché : " + data[i].id);
               //console.table(data[i]);
               setLocation(data[i]);
@@ -46,7 +44,6 @@ function Logement() {
   );
 
   if (location.id === undefined) {
-    console.log("error 404");
     return <Error />;
   } else {
     return (
