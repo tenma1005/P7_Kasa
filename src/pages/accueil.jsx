@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../components/banner";
 import image from "../images/banner.png";
 import Cards from "../components/cards";
+import Loader from "../components/loader";
 
 function Accueil({ logements }) {
   if (logements.length > 0) {
@@ -15,7 +16,7 @@ function Accueil({ logements }) {
     return (
       <main>
         <Banner image={image} title={"Chez vous, partout et ailleurs"} />
-        <div>Chargement en cours...</div>
+        <Loader />
       </main>
     );
   }

@@ -7,17 +7,21 @@ import Host from "../components/host";
 import DiapoImg from "../components/diapo_img";
 import Categories from "../components/categories";
 import Collapse from "../components/collapse";
-
 import vector1 from "../images/vector-1.png";
+import Loader from "../components/loader";
 
 function Logement({ logements }) {
   const { logementId } = useParams();
   const [location, setLocation] = useState(null);
-  console.log(location);
+  //console.log(location);
   useEffect(
     function () {
       if (logements !== undefined && logements.length > 0) {
-        setLocation(logements.find((logement) => logement.id === logementId));
+        setLocation(
+          logements.find(function (logement) {
+            return logement.id === logementId;
+          })
+        );
       }
     },
     [logements, logementId]
@@ -25,7 +29,7 @@ function Logement({ logements }) {
   if (location === undefined) {
     return <Error />;
   } else if (location === null) {
-    return <div>Chargement en cours...</div>;
+    return <Loader />;
   } else {
     return (
       <main className="accommodation">
