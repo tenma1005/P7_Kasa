@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Error from "./error_404";
@@ -12,13 +12,20 @@ import vector1 from "../images/vector-1.png";
 
 function Logement({ logements }) {
   const { logementId } = useParams();
-  const [location] = useState(
-    logements.find((logement) => logement.id === logementId)
-  );
+  const [location, setLocation] = useState(null);
   console.log(location);
-
+  useEffect(
+    function () {
+      if (logements !== undefined && logements.length > 0) {
+        setLocation(logements.find((logement) => logement.id === logementId));
+      }
+    },
+    [logements, logementId]
+  );
   if (location === undefined) {
     return <Error />;
+  } else if (location === null) {
+    return <div>Chargement en cours...</div>;
   } else {
     return (
       <main className="accommodation">
