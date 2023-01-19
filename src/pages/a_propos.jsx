@@ -1,3 +1,4 @@
+import React from "react";
 import BannerAbout from "../components/banner_about";
 import Collapse from "../components/collapse";
 import imageBanner from "../images/about_banner_desktop_version.png";
