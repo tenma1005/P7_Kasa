@@ -1,21 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import image from "../images/404.png";
+import NotFound from "../components/not_found";
 
 function Error() {
-  return (
-    <main className="error">
-      <h2 className="error-404">
-        <img src={image} alt="" />
-      </h2>
-      <h3 className="error-message">
-        Oups! La page que vous demandez n'existe pas.
-      </h3>
-      <NavLink to="/" className="return-home">
-        Retourner sur la page d'accueil
-      </NavLink>
-    </main>
-  );
+  return <NotFound />;
 }
 
 export default Error;
