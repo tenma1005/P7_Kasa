@@ -26,7 +26,7 @@ function Logement({ logements }) {
   //On récupère l'id du logement sélectionné via l'URL et on le stoke
   const { logementId } = useParams();
 
-  //Déclaration d'une variable d'état, que l'on appellera "location"
+  //Déclaration d'une variable d'état, que l'on appellera "location" qui est initialisée à null.
   const [location, setLocation] = useState(null);
   //console.log(location);
 
