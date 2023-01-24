@@ -1,7 +1,15 @@
 import React from "react";
+
+//import du composant de React Router -> NavLink
 import { NavLink } from "react-router-dom";
 
+//import de l'image à utiliser pour la création ce composant :
 import Logo from "../images/logo.png";
+
+/*=============================================================================================
+COMPOSANT POUR TOUTES LES PAGES DE L'APPLICATION -> LE BUT EST DE FAIRE AFFICHER LE LOGO DE "KASA"
+                                                    ET LA BARRE DE NAVIGATION
+===============================================================================================*/
 
 function Navbar() {
   return (

@@ -1,5 +1,9 @@
 import React from "react";
 
+/*=============================================================================================
+COMPOSANT POUR LA PAGE D'ACCUEIL -> LE BUT EST DE FAIRE AFFICHER LA BANNIÈRE DE LA PAGE D'ACCUEIL
+===============================================================================================*/
+
 function Banner({ image, title }) {
   return (
     <div className="banner">

@@ -1,6 +1,15 @@
 import React from "react";
+
+//import du composant de React Router -> NavLink
 import { NavLink } from "react-router-dom";
+
+//import de l'image à utiliser pour la création ce composant :
 import image from "../images/404.png";
+
+/*=============================================================================================
+COMPOSANT DE LA PAGE ERROR 404 -> LE BUT EST DE FAIRE AFFICHER LE MESSAGE D'ERREUR 404 
+                                  ET METTRE LE LIEN DE RETOUR VERS LA PAGE D'ACCUEIL
+===============================================================================================*/
 
 function NotFound() {
   return (

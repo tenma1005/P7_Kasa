@@ -1,5 +1,9 @@
 import React from "react";
 
+/*=============================================================================================
+COMPOSANT POUR LA PAGE D'ACCUEIL ET LA PAGE DES LOGEMENTS -> LE BUT EST DE FAIRE AFFICHER UN LOADER LORS DES CHARGEMENTS DE DONNÉES
+===============================================================================================*/
+
 function Loader() {
   return (
     <div className="loader">

@@ -1,5 +1,10 @@
 import React from "react";
 
+/*=============================================================================================
+COMPOSANT POUR LA PAGE LOGEMENTS -> LE BUT EST DE FAIRE AFFICHER LE NOM 
+                                    ET LA PHOTO DE PROFIL DU PROPRIÉTAIRE DU LOGEMENT EN QUESTION
+===============================================================================================*/
+
 function Host(host) {
   return (
     <div className="host">

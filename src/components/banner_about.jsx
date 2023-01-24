@@ -1,5 +1,9 @@
 import React from "react";
 
+/*=============================================================================================
+COMPOSANT POUR LA PAGE À PROPOS -> LE BUT EST D'AFFICHER LA BANNIÈRE DE LA PAGE "À PROPOS"
+===============================================================================================*/
+
 function BannerAbout({ image, image2 }) {
   return (
     <div className="banner banner-about">
