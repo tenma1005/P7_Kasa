@@ -1,19 +1,39 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+
+//Import des Hooks :
+import { useEffect } from "react"; //Hook d'effet
+import { useState } from "react"; //Hook d'état
+import { useParams } from "react-router-dom"; //Hook de contexte
+
+//Import des composents React :
 import Error from "./error_404";
 import Opinion from "../components/opinion";
 import Host from "../components/host";
 import DiapoImg from "../components/diapo_img";
 import Categories from "../components/categories";
 import Collapse from "../components/collapse";
-import vector1 from "../images/vector-1.png";
 import Loader from "../components/loader";
 
+//Import de l'image à utiliser :
+import vector1 from "../images/vector-1.png";
+
+/*=============================================================================================
+COMPOSENT DE LA PAGE LOGEMENTS -> LE BUT EST DE FAIRE AFFICHER LE LOGEMENT SÉLECTIONNÉ
+                                  À PARTIR DE LA PAGE D'ACCUEIL
+===============================================================================================*/
+
 function Logement({ logements }) {
+  // On récupère l'id du logement sélectionné via l'URL et on le stoke
   const { logementId } = useParams();
+
+  // Déclaration d'une variable d'état, que l'on appellera "location"
   const [location, setLocation] = useState(null);
   //console.log(location);
+
+  /*
+  Ici, useEffect est utilisé pour trouver le logement sélectionné dans la liste de tous les logements à partir de son id récupéré via l'URL.
+  Il prend en paramètre une fonction qui contient cette logique et un tableau de dépendances qui indique quand la fonction doit être exécutée à nouveau.
+  */
   useEffect(
     function () {
       if (logements !== undefined && logements.length > 0) {
@@ -26,6 +46,8 @@ function Logement({ logements }) {
     },
     [logements, logementId]
   );
+
+  //Pour finir, on place la condition suivante :
   if (location === undefined) {
     return <Error />;
   } else if (location === null) {
