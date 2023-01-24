@@ -20,7 +20,13 @@ COMPOSENT DE L'APP -> LE BUT EST DE DÉFINIR LA STRUCTURE DE L'APPLICATION ET LE
 //Il peut également contenir des logiques de gestion d'état :
 
 function App() {
+  //Déclaration d'une variable d'état, que l'on appellera "logements"
   const [logements, setLogements] = useState([]);
+
+  /*
+  useEffect est utilisé pour effectuer un fetch à une API pour récupérer les données des logements, 
+  puis met à jour l'état logements en utilisant setLogements.
+  */
   useEffect(function () {
     fetch("http://localhost:3000/logements.json")
       .then(function (response) {
