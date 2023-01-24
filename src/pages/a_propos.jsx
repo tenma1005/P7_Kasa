@@ -1,9 +1,18 @@
 import React from "react";
+
+//import des composants React :
 import BannerAbout from "../components/banner_about";
 import Collapse from "../components/collapse";
+
+//import des images :
 import imageBanner from "../images/about_banner_desktop_version.png";
 import imageBanner2 from "../images/about_banner_mobile_version.png";
 import vector1 from "../images/vector-1.png";
+
+/*=============================================================================================
+COMPOSANT DE LA PAGE À PROPOS -> LE BUT EST DE FAIRE AFFICHER LA BANNIÈRE ET LES COLLAPSES
+                                 (AVEC LES TEXTES DE LA MAQUETTE)
+===============================================================================================*/
 
 function AboutPage() {
   return (
