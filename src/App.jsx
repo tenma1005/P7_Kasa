@@ -15,8 +15,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 /*=============================================================================================
-COMPOSENT DE L'APP -> LE BUT EST DE CONFIGURER L'APPLICATION REACT. POUR FAIRE SIMPLE, C'EST LE POINT D'ENTRÉE POUR L'APPLICATION.
-                      IL IMPORTE TOUS LES AUTRES COMPOSANTS DE L'APPLICATION. (c'est l'architecture de l'application)
+COMPOSENT DE L'APP -> LE BUT EST DE DÉFINIR LA STRUCTURE DE L'APPLICATION ET LES COMPOSANTS PRINCIPAUX DE L'APPLICATION.
 ===============================================================================================*/
 //Il peut également contenir des logiques de gestion d'état :
 
