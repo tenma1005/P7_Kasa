@@ -1,16 +1,16 @@
 import React from "react";
 
-// import de ReactDOM (qui permet de connecter React à un navigateur web)
+//import de ReactDOM (qui permet de connecter React à un navigateur web)
 import ReactDOM from "react-dom/client";
 
-// import du fichier App
+//import du fichier App
 import App from "./App";
 
-// import des fichiers CSS (en format scss grâce au package "Sass"):
+//import des fichiers CSS (en format scss grâce au package "Sass" qu'on a installé):
 import "./styles/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//On utilise la méthode render pour afficher les composants React dans cet élément de la page HTML (root)
+//On utilise la méthode render pour afficher les composants React dans cet élément de la page HTML (root) :
 root.render(
   //<React.StrictMode>
   <App />

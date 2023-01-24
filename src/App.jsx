@@ -4,18 +4,18 @@ import React from "react";
 import { useEffect } from "react"; //Hook d'effet
 import { useState } from "react"; //Hook d'état
 
-//import du composent de React Router pour permettre de gérer les routes de l'application :
+//import du composant de React Router pour permettre de gérer les routes de l'application :
 import { BrowserRouter } from "react-router-dom";
 
 //import du Router :
 import Router from "./Router";
 
-//import des composents React qui vont être utiliser sur la totalité des pages de l'application web :
+//import des compsants React qui vont être utiliser sur la totalité des pages de l'application web :
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 /*=============================================================================================
-COMPOSENT DE L'APP -> LE BUT EST DE DÉFINIR LA STRUCTURE DE L'APPLICATION ET LES COMPOSANTS PRINCIPAUX DE L'APPLICATION.
+COMPOSANT DE L'APP -> LE BUT EST DE DÉFINIR LA STRUCTURE DE L'APPLICATION ET LES COMPOSANTS PRINCIPAUX DE L'APPLICATION.
 ===============================================================================================*/
 //Il peut également contenir des logiques de gestion d'état :
 

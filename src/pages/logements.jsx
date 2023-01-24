@@ -1,11 +1,11 @@
 import React from "react";
 
-//Import des Hooks :
+//import des Hooks :
 import { useEffect } from "react"; //Hook d'effet
 import { useState } from "react"; //Hook d'état
 import { useParams } from "react-router-dom"; //Hook de contexte
 
-//Import des composents React :
+//import des composants React :
 import Error from "./error_404";
 import Opinion from "../components/opinion";
 import Host from "../components/host";
@@ -14,19 +14,19 @@ import Categories from "../components/categories";
 import Collapse from "../components/collapse";
 import Loader from "../components/loader";
 
-//Import de l'image à utiliser :
+//import de l'image à utiliser :
 import vector1 from "../images/vector-1.png";
 
 /*=============================================================================================
-COMPOSENT DE LA PAGE LOGEMENTS -> LE BUT EST DE FAIRE AFFICHER LE LOGEMENT SÉLECTIONNÉ
+COMPOSANT DE LA PAGE LOGEMENTS -> LE BUT EST DE FAIRE AFFICHER LE LOGEMENT SÉLECTIONNÉ
                                   À PARTIR DE LA PAGE D'ACCUEIL
 ===============================================================================================*/
 
 function Logement({ logements }) {
-  // On récupère l'id du logement sélectionné via l'URL et on le stoke
+  //On récupère l'id du logement sélectionné via l'URL et on le stoke
   const { logementId } = useParams();
 
-  // Déclaration d'une variable d'état, que l'on appellera "location"
+  //Déclaration d'une variable d'état, que l'on appellera "location"
   const [location, setLocation] = useState(null);
   //console.log(location);
 
