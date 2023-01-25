@@ -12,10 +12,9 @@ import "./styles/index.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //On utilise la méthode render pour afficher les composants React dans cet élément de la page HTML (root) :
 root.render(
-  //<React.StrictMode>
-  <App />
-  //</React.StrictMode>
-  // On retire le strict mode de react pour évite les doublons dans la console qui ne sont pas très agréables...
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 /*
