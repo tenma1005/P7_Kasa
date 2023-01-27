@@ -30,12 +30,10 @@ function App() {
   useEffect(function () {
     fetch("http://localhost:3000/logements.json")
       .then(function (response) {
-        //console.table(response);
+        //console.log(response);
         return response.json();
       })
       .then(function (logements) {
-        //console.log(data);
-        //console.table(data[0].id);
         //console.table(logements);
         setLogements(logements);
       });
